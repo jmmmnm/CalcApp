@@ -12,11 +12,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener(this)
+        button1.setOnClickListener(this)
+        button2.setOnClickListener(this)
+        button3.setOnClickListener(this)
+        button4.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
     }
+
 }
