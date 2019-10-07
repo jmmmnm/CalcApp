@@ -19,15 +19,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button4.setOnClickListener(this)
     }
 
-  //  var num1: String = editText1.text.toString()
-
-
-  //  var num2: String = editText2.text.toString()
-
 
     override fun onClick(v: View) {
+        var nyuryoku1: String = editText1.text.toString()
+        var nyuryoku2: String = editText2.text.toString()
 
-        if (v.id == R.id.button1) {
+        if(nyuryoku1 == "" || nyuryoku2 == ""){
+            Log.d("CALC_TEST","ダメダメだよ")
+        }else if (v.id == R.id.button1) {
             Log.d("CALC_TEST","${editText1.text}+${editText2.text}")
         } else if (v.id == R.id.button2) {
             Log.d("CALC_TEST","${editText1.text}-${editText2.text}")
@@ -36,6 +35,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         } else if (v.id == R.id.button4) {
             Log.d("CALC_TEST","${editText1.text}/${editText2.text}")
         }
+
+
     }
 
 
