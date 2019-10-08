@@ -12,8 +12,19 @@ class SecondActivity : AppCompatActivity() {
 
         val value1 = intent.getDoubleExtra("VALUE1", 0.0)
         val value2 = intent.getDoubleExtra("VALUE2", 0.0)
+        val value3 = intent.getStringExtra("VALUE3")
 
-        textView.text = "${value1 + value2}"
+        if(value3=="+"){
+            textView.text = "${value1} ${value3} ${value2} = ${value1+value2}"
+        }else if(value3=="-"){
+            textView.text = "${value1} ${value3} ${value2} = ${value1-value2}"
+        }else if(value3=="*"){
+            textView.text = "${value1} ${value3} ${value2} = ${value1*value2}"
+        }else if(value3=="/"){
+            textView.text = "${value1} ${value3} ${value2} = ${value1/value2}"
+        }else {
+            textView.text = "何か数値を入力してください"
+        }
 
     }
 }
